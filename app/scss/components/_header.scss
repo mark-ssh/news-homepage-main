@@ -3,6 +3,11 @@
 .header {
   background-color: $color-white;
   width: 100%;
+  @include breakpoint-up(medium) {
+    display: flex; 
+    align-items: center;
+    justify-content: space-between;
+  }
 
   .logo {
     display: inline-block;
@@ -18,7 +23,8 @@
     width: 10rem;
     @include breakpoint-up(medium) {
         width: auto;
-        left: 68%;
+        position: relative;
+        left: 0;
     }
   }
 
@@ -94,13 +100,20 @@
     background-color: #fff;
 
     li {
+        padding: 0.5rem 0.5rem;
       a {
         color: var(--darkgrayish-blue);
         display: block;
-        padding: 0.5rem 0.5rem;
         text-decoration: none;
+        padding: 0;
       }
+      
     }
+    @include breakpoint-up(medium) {
+        li:last-child {
+            padding-right: 0;
+        }
+      }
   }
 
   @include breakpoint-up(medium) {

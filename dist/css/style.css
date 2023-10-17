@@ -54,12 +54,19 @@ body {
 }
 @media (min-width: 55.60rem) {
   .hero_section-container .left_section {
-    width: 70%;
+    width: 75%;
+    display: flex;
+    flex-direction: column;
   }
 }
 .hero_section-container .left_section img {
   width: 100%;
   max-width: 25rem;
+}
+@media (min-width: 55.60rem) {
+  .hero_section-container .left_section img {
+    display: none;
+  }
 }
 .hero_section-container .left_section .title {
   font-size: 2.6rem;
@@ -86,8 +93,18 @@ body {
   letter-spacing: 2px;
   cursor: pointer;
 }
+.hero_section-container .left_section .desktop-img {
+  display: none;
+}
+@media (min-width: 55.60rem) {
+  .hero_section-container .left_section .desktop-img {
+    display: inline-block;
+    width: 100%;
+    max-width: 100%;
+  }
+}
 .hero_section-container .right_section {
-  width: 21.4rem;
+  width: 100%;
   height: fit-content;
   background-color: var(--verydark-blue);
   color: var(--off-white);
@@ -95,7 +112,8 @@ body {
 }
 @media (min-width: 55.60rem) {
   .hero_section-container .right_section {
-    width: 30%;
+    width: 25%;
+    margin-top: 0;
   }
 }
 .hero_section-container .right_section .container {
@@ -123,29 +141,30 @@ body {
   border-bottom: 0 !important;
   padding-bottom: 0 !important;
 }
-.hero_section-container .cards_container {
+
+.cards_container {
   display: flex;
   flex-direction: column;
   gap: 2rem;
-  margin-top: 2.3rem;
+  margin: 2.5rem 0;
 }
-.hero_section-container .cards_container .cards {
+.cards_container .cards {
   display: flex;
   gap: 1rem;
   height: 8rem;
 }
-.hero_section-container .cards_container .cards .img_data .title {
+.cards_container .cards .img_data .title {
   font-size: 1.6rem;
   color: var(--grayish-blue);
   margin-bottom: 1rem;
 }
-.hero_section-container .cards_container .cards .img_data .sub_title {
+.cards_container .cards .img_data .sub_title {
   font-size: 1.2rem;
   font-weight: 800;
   margin: 0 0 1rem 0;
   color: #000;
 }
-.hero_section-container .cards_container .cards .img_data p {
+.cards_container .cards .img_data p {
   color: var(--darkgrayish-blue);
   margin: 0;
 }
@@ -171,6 +190,13 @@ a, a:visited, a:active {
   background-color: #fff;
   width: 100%;
 }
+@media (min-width: 55.60rem) {
+  .header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+}
 .header .logo {
   display: inline-block;
 }
@@ -185,7 +211,8 @@ a, a:visited, a:active {
 @media (min-width: 55.60rem) {
   .header .menu {
     width: auto;
-    left: 68%;
+    position: relative;
+    left: 0;
   }
 }
 .header .menu-icon {
@@ -248,11 +275,19 @@ a, a:visited, a:active {
   overflow: hidden;
   background-color: #fff;
 }
+.header ul li {
+  padding: 0.5rem 0.5rem;
+}
 .header ul li a {
   color: var(--darkgrayish-blue);
   display: block;
-  padding: 0.5rem 0.5rem;
   text-decoration: none;
+  padding: 0;
+}
+@media (min-width: 55.60rem) {
+  .header ul li:last-child {
+    padding-right: 0;
+  }
 }
 @media (min-width: 55.60rem) {
   .header li {

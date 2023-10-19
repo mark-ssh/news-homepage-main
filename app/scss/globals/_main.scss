@@ -19,7 +19,8 @@ body {
 
 .primary_container {
   @include breakpoint-up(medium) {
-    margin: 5% 10%;
+    padding: 5% 10% 0 10%;
+    margin: 0;
   }
   margin: 2rem 1rem;
 }
@@ -36,6 +37,7 @@ body {
     justify-content: space-between;
     gap: 2rem;
     width: 100%;
+    height: 40rem;
   }
 
   .left_section {
@@ -44,12 +46,28 @@ body {
       display: flex;
       flex-direction: column;
     }
+    .d_flex {
+      @include breakpoint-up(medium) {
+        display: flex;
+        gap: 5rem;
+        margin-top: 2rem;
+        height: 22%;
+      }
+      .d_flex2 {
+        @include breakpoint-up(medium) {
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+        }
+      }
+    }
 
     img {
       width: 100%;
       max-width: 25rem;
       @include breakpoint-up(medium) {
        display: none;
+       height: 75%;
       }
     }
 
@@ -58,12 +76,19 @@ body {
       font-weight: 800;
       line-height: 1;
       margin: 1.2rem 0;
+      @include breakpoint-up(medium) {
+        font-size: 3.2rem;
+        margin: 0;
+      }
     }
 
     .description {
       color: var(--darkgrayish-blue);
       line-height: 1.5;
       margin-bottom: 1.6rem;
+      @include breakpoint-up(medium) {
+        margin: 0;
+      }
     }
 
     button {
@@ -100,26 +125,44 @@ body {
     @include breakpoint-up(medium) {
       width: 25%;
       margin-top: 0;
+      height: 100%;
     }
 
     .container {
       padding: 1.2rem 1rem;
       height: fit-content;
+      @include breakpoint-up(medium) {
+        padding: 2rem 1.8rem;
+        height: 100%;
+      }
       h1 {
         margin: 0;
         color: var(--soft-orange);
+        @include breakpoint-up(medium) {
+          font-size: 2.5rem;
+        }
       }
       .article_content {
         border-bottom: 1px solid hsl(236, 13%, 42%);
         padding-bottom: 1rem;
         margin-top: 1.6rem;
+        @include breakpoint-up(medium) {
+          margin-top: 2rem;
+          padding-bottom: 1.5rem;
+        }
         h4 {
           margin-top: 0;
           font-size: 1.2rem;
           margin-bottom: 0.5rem;
+          @include breakpoint-up(medium) {
+            margin-bottom: 1.3rem;
+          }
         }
         p {
             color: var(--grayish-blue);
+            @include breakpoint-up(medium) {
+              line-height: 1.5;
+            }
         }
       }
       .nborder-bottom {
@@ -134,6 +177,12 @@ body {
     flex-direction: column;
     gap: 2rem;
     margin: 2.5rem 0;
+    @include breakpoint-up(medium) {
+      width: 100%;
+      flex-direction: row;
+      justify-content: space-between;
+      margin: 5rem 0 2.5rem 0;
+    }
     .cards {
         display: flex;
         gap: 1rem;

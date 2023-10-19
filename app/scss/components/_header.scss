@@ -20,11 +20,14 @@
     transition: max-height 0.2s ease-out;
     position: absolute;
     left: 60%;
-    width: 10rem;
+    width: 9rem;
     @include breakpoint-up(medium) {
         width: auto;
         position: relative;
         left: 0;
+        display: flex;
+        gap: 2.5rem;
+       
     }
   }
 
@@ -101,11 +104,16 @@
 
     li {
         padding: 0.5rem 0.5rem;
+        
       a {
         color: var(--darkgrayish-blue);
         display: block;
         text-decoration: none;
         padding: 0;
+      }
+      @include breakpoint-up(medium) {
+        padding: 0.5rem 0.5rem;
+
       }
       
     }
@@ -122,6 +130,9 @@
     }
     li a {
       padding: 20px 30px;
+      &:hover {
+        color: #4c19f4;
+      }
     }
     .menu {
       clear: none;

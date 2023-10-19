@@ -33,7 +33,8 @@ body {
 }
 @media (min-width: 55.60rem) {
   .primary_container {
-    margin: 5% 10%;
+    padding: 5% 10% 0 10%;
+    margin: 0;
   }
 }
 
@@ -50,6 +51,7 @@ body {
     justify-content: space-between;
     gap: 2rem;
     width: 100%;
+    height: 40rem;
   }
 }
 @media (min-width: 55.60rem) {
@@ -59,6 +61,21 @@ body {
     flex-direction: column;
   }
 }
+@media (min-width: 55.60rem) {
+  .hero_section-container .left_section .d_flex {
+    display: flex;
+    gap: 5rem;
+    margin-top: 2rem;
+    height: 22%;
+  }
+}
+@media (min-width: 55.60rem) {
+  .hero_section-container .left_section .d_flex .d_flex2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+}
 .hero_section-container .left_section img {
   width: 100%;
   max-width: 25rem;
@@ -66,6 +83,7 @@ body {
 @media (min-width: 55.60rem) {
   .hero_section-container .left_section img {
     display: none;
+    height: 75%;
   }
 }
 .hero_section-container .left_section .title {
@@ -74,10 +92,21 @@ body {
   line-height: 1;
   margin: 1.2rem 0;
 }
+@media (min-width: 55.60rem) {
+  .hero_section-container .left_section .title {
+    font-size: 3.2rem;
+    margin: 0;
+  }
+}
 .hero_section-container .left_section .description {
   color: var(--darkgrayish-blue);
   line-height: 1.5;
   margin-bottom: 1.6rem;
+}
+@media (min-width: 55.60rem) {
+  .hero_section-container .left_section .description {
+    margin: 0;
+  }
 }
 .hero_section-container .left_section button {
   font-family: inherit;
@@ -114,28 +143,56 @@ body {
   .hero_section-container .right_section {
     width: 25%;
     margin-top: 0;
+    height: 100%;
   }
 }
 .hero_section-container .right_section .container {
   padding: 1.2rem 1rem;
   height: fit-content;
 }
+@media (min-width: 55.60rem) {
+  .hero_section-container .right_section .container {
+    padding: 2rem 1.8rem;
+    height: 100%;
+  }
+}
 .hero_section-container .right_section .container h1 {
   margin: 0;
   color: var(--soft-orange);
+}
+@media (min-width: 55.60rem) {
+  .hero_section-container .right_section .container h1 {
+    font-size: 2.5rem;
+  }
 }
 .hero_section-container .right_section .container .article_content {
   border-bottom: 1px solid hsl(236, 13%, 42%);
   padding-bottom: 1rem;
   margin-top: 1.6rem;
 }
+@media (min-width: 55.60rem) {
+  .hero_section-container .right_section .container .article_content {
+    margin-top: 2rem;
+    padding-bottom: 1.5rem;
+  }
+}
 .hero_section-container .right_section .container .article_content h4 {
   margin-top: 0;
   font-size: 1.2rem;
   margin-bottom: 0.5rem;
 }
+@media (min-width: 55.60rem) {
+  .hero_section-container .right_section .container .article_content h4 {
+    margin-bottom: 1.3rem;
+  }
+}
 .hero_section-container .right_section .container .article_content p {
   color: var(--grayish-blue);
+}
+@media (min-width: 55.60rem) {
+  .hero_section-container .right_section .container .article_content p {
+    line-height: 1.5;
+  }
 }
 .hero_section-container .right_section .container .nborder-bottom {
   border-bottom: 0 !important;
@@ -147,6 +204,14 @@ body {
   flex-direction: column;
   gap: 2rem;
   margin: 2.5rem 0;
+}
+@media (min-width: 55.60rem) {
+  .cards_container {
+    width: 100%;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 5rem 0 2.5rem 0;
+  }
 }
 .cards_container .cards {
   display: flex;
@@ -206,13 +271,15 @@ a, a:visited, a:active {
   transition: max-height 0.2s ease-out;
   position: absolute;
   left: 60%;
-  width: 10rem;
+  width: 9rem;
 }
 @media (min-width: 55.60rem) {
   .header .menu {
     width: auto;
     position: relative;
     left: 0;
+    display: flex;
+    gap: 2.5rem;
   }
 }
 .header .menu-icon {
@@ -285,6 +352,11 @@ a, a:visited, a:active {
   padding: 0;
 }
 @media (min-width: 55.60rem) {
+  .header ul li {
+    padding: 0.5rem 0.5rem;
+  }
+}
+@media (min-width: 55.60rem) {
   .header ul li:last-child {
     padding-right: 0;
   }
@@ -295,6 +367,9 @@ a, a:visited, a:active {
   }
   .header li a {
     padding: 20px 30px;
+  }
+  .header li a:hover {
+    color: #4c19f4;
   }
   .header .menu {
     clear: none;

@@ -78,7 +78,7 @@ body {
 }
 .hero_section-container .left_section img {
   width: 100%;
-  max-width: 25rem;
+  max-width: 35rem;
 }
 @media (min-width: 55.60rem) {
   .hero_section-container .left_section img {

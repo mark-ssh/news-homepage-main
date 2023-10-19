@@ -64,7 +64,7 @@ body {
 
     img {
       width: 100%;
-      max-width: 25rem;
+      max-width: 35rem;
       @include breakpoint-up(medium) {
        display: none;
        height: 75%;
